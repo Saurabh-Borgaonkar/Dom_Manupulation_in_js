@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practic2</title>
+</head>
+<body>
+    <script>
+        let a=async()=>{
+     return  new Promise((resolve, reject) => {
+          setTimeout(()=>{
+            reject("rejected");
+          },3000)
+        })
+    }
+      async function main() {
+       await a().catch((err)=>{
+            alert(err)
+            console.log("rejected")
+        })
+        
+      } 
+      main(); 
+    </script>
+</body>
+</html>

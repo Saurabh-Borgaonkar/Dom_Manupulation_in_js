@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//write js program to load java file on browser using promis
+function load(src){
+return new Promise((resolve, reject) => {
+    let script=document.createElement("script");
+    script.src=src;
+    script.onload=()=>resolve("File is loaded on browser");
+    script.onerror=reject(new Error("Error"));
+  //  document.head.append(script)
+   document.body.append(script); 
+
+})
+}
+
+load("hello.js")
+.then((res)=>{
+alert(res);
+}).catch((err)=>{
+alert(err);
+})
+
+// let randomDelay=()=>{
+//                 return new Promise((resolve,reject)=>{
+//                     let timeout=1+6*Math.random();
+//                     setTimeout(() => {
+//                         resolve();
+//                     },timeout*1000);
+//                 })
+//             }
+// async function load(src){
+
+// return new Promise((resolve, reject) => {
+//     //randomdelay();
+//     let script=document.createElement("script");
+//     script.src=src;
+//     script.onload=resolve("File is loaded on browser");
+//     script.onerror=reject(new Error("Error"));
+//   //  document.head.append(script)
+//    document.body.append(script); 
+
+// })
+// }
+
+// async function main(){
+// await load("hello.js")
+// .then((res)=>{
+    
+// alert(res);
+// }).catch((err)=>{
+// alert(err);
+// })
+// }
+
+    </script>
+</body>
+</html>

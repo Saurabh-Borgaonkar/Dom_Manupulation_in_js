@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js DOM</title>
+    <style>
+        .container{
+            border: 2px solid pink;
+            height: 200px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .box1{
+            height: 70px;
+            width: 70px;
+            border: 2px solid rgb(14, 15, 15);
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container" hidden>
+        <div class="box1" data-Creater="saurabh" >Box1</div>
+        <div class="box1" >Box2</div>
+        <div class="box1">Box3</div>
+        <div class="box1">Box4</div>
+
+        <button id="btn" onclick="click()">Click</button>
+    </div>
+</body>
+
+<script>
+    // function click()
+    // {
+    //     document.write("hiiiiii");
+
+    // }
+    // let btn=document.getElementById("btn");
+    // btn.onclick();
+    //let a=document.getElementsByClassName("box1");
+    //a[0].style.backgroundColor = "yellow";
+    
+    //document.getElementById("box").style.backgroundColor="pink";
+  
+    //document.querySelectorAll(".box1").forEach((e)=>{
+    //    e.style.backgroundColor="pink"
+    //})
+
+  /* let b= document.querySelectorAll(".box1");
+  for(let i=0 ; i<b.length;i++)
+  b[i].style.backgroundColor="red"; */
+  
+  let boxes=document.querySelector(".container").children;
+  Array.from(boxes).forEach(e => {
+    e.style.backgroundColor=get_random_color();
+    e.style.color=get_random_color();
+  })
+
+  function get_random_color()
+  {
+    let color1= Math.ceil(0 + Math.random()*255);
+    let color2= Math.ceil(0 + Math.random()*255);
+    let color3= Math.ceil(0 + Math.random()*255);
+    return `rgb(${color1} ,${color2} ,${color3})`;
+  }
+
+  let div=document.createElement("div");
+  div.className="hiii"
+  div.innerHTML="hiiiii"
+ // document.querySelector(".containar").append(div);
+ //div.insertAdjacentElement("afterend",'<b>hiiii</b>')
+</script>
+</html>

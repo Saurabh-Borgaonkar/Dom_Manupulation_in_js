@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event bubling</title>
+    <style>
+        .container{
+            width: 70vw;
+            height: 100px;
+            background-color: yellow;
+            margin: 14px;
+            padding: 20px;
+        }
+        .ch-cont{
+            width: 60vw;
+            height: 80px;
+            background-color: pink;
+            padding: 10px;
+            margin: 14px;
+        
+        }
+        .child{
+            width: 50vw;
+            height: 60px;
+            background-color: gray;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="ch-cont">
+            <div class="child">
+                child
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+
+document.querySelector(".container").addEventListener("click",(e)=>{
+      //  document.body.style.backgroundColor="pink"
+      alert("container")
+        console.log("contaoner click")
+    })
+    document.querySelector(".ch-cont").addEventListener("click",(e)=>{
+
+     //   document.body.style.backgroundColor="gray";
+     alert("ch-cont")
+        console.log("ch container clicked")
+        
+    })
+    document.querySelector(".child").addEventListener("click",(e)=>{
+    
+        alert("child")
+        e.stopPropagation();
+//document.body.style.backgroundColor="gray";
+console.log("child clicked")
+
+})
+</script>
+</html>

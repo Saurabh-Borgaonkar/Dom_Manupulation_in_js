@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview question</title>
+</head>
+<body>
+    <script>
+// create arr os some students and give to them the house name ifno of students less than 6 and no of stu less than 8 and no of student less 12 
+
+
+let Students=["Ram","Rahul",'Shiv','Jonny','Ronny','Luky','harry','shubh','lav','kush'];
+let  houses = []
+
+        for (const student of Students) {
+            console.log(student.length)
+            if(student.length<6)
+        {
+            houses.push('Ram Lilaa')
+        }else  if(student.length<8)
+        {
+            houses.push('Aappaji Nivaas');
+        }else  if(student.length<10)
+        {
+            houses.push('Radha Krishna');
+        }
+        else
+        { houses.push("Shyam Lilaa");
+    }
+        }
+
+//     for (let i = 0; i < Students.length; i++) {
+        
+//         console.log(i.length)
+//         if(i<2)
+//         {
+//             houses.push('Ram Lilaa')
+//         }else  if(i<4)
+//         {
+//             houses.push('Aappaji Nivaas');
+//         }else  if(i<6)
+//         {
+//             houses.push('Radha Krishna');
+//         }
+//         else
+//         { houses.push("Shyam Lilaa");
+        
+//     }
+
+//   //  console.log(student)
+//     }
+    console.log(Students)
+    console.log(houses);
+    </script>
+</body>
+</html>

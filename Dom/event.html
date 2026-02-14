@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dnamically element insert</title>
+</head>
+<body>
+    <div class="container cont main hiii" style="border: 2px solid black;">
+        <div class="box1" style=" color:gray;" data-createdby="saurabh" >Box1  hiiiiiiiiiii</div>
+        <div class="box2">hii</div>
+        <div class="box3">How are uu ?</div>
+        <div class="box4">Am good and you</div>
+    </div>
+    <script>
+        //it is events/DOM
+
+
+        //Create element dynamically
+        let div=document.createElement("div");
+        div.className="hii"
+        div.id="id1"
+        div.innerHTML="<ul><li>Inserted by js by <b> saurabh</b></li>";
+      //  document.querySelector(".container").append(div)
+      //  document.querySelector(".container").prepend(div)
+        document.querySelector(".container").before(div)
+        //document.querySelector(".container").after(div)
+        div.setAttribute("style","color:green")
+
+        let cont=document.querySelector(".container")
+        cont.insertAdjacentHTML("afterbegin","<b>Hello smarty</b>")
+        //cont.insertAdjacentHTML("beforebegin","<b>Hello smarty</b>")
+      // cont.insertAdjacentHTML("afterend","<b>Hello smarty</b>")
+      // cont.insertAdjacentHTML("beforeend","<b>Hello smarty</b>")
+            document.querySelector(".box1").remove()
+            
+    </script>
+</body>
+</html>

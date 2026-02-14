@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <label for=""><b>One Click to change : </b></label>
+   <input type="button" value="yellow"  class="btn1">
+   <input type="button" value="pink" class="btn2">
+   <input type="button" value="gray" class="btn3">
+</body>
+
+<script>
+    //click
+    let btn1=document.querySelector(".btn1");
+    btn1.addEventListener("click" , ()=>{
+        alert("heyyy");
+        document.querySelector("body").style.backgroundColor="yellow";
+        console.log("yellow clicked");
+        btn1.innerHTML="yellow clicked";
+        
+    })
+//    btn1.removeEventListener("click" , ()=>{
+//         alert("heyyy");
+//         document.querySelector("body").style.backgroundColor"yellow";
+//         console.log("yellow clicked");
+//         btn1.innerHTML="yellow clicked";
+        
+//     })
+
+    document.querySelector(".btn2").addEventListener("click",()=>{
+        document.body.style.backgroundColor="pink"
+        console.log("pink clicked")
+    })
+    document.querySelector(".btn3").addEventListener("click",()=>{
+
+        document.body.style.backgroundColor="gray";
+        console.log("yellow clicked")
+        
+    })
+</script>
+</html>

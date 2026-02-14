@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <script>
+        
+        let random=Math.random()
+        let a=prompt("Enter num :");
+       let b=window.prompt("Enter num2");
+       let c=prompt("Enter opration");
+    let obj={
+        "+" : "-",
+        "-" : "/",
+        "*" : "+",
+        "/" : "*",
+    }
+    if(random>0.1)
+    {
+        console.log(`The result ${eval(`${a} ${b} ${c}`)}`);
+    }
+    else{
+        c=obj[c];
+        console.log(`The result ${eval(`${a} ${b} ${c}`)}`);
+    }
+    </script>
+    </body>
+</html>

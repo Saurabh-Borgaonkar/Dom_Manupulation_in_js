@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>asyn and await function</h1>
+    <script>
+        // async function getdata(){
+        //     return new Promise((resolve, reject) => {
+        //         setTimeout(()=>{
+        //             resolve("recieved data");
+        //         },2000);
+        //     })
+        // }
+
+        async function getdata() {
+            
+                let x = await fetch('https://jsonplaceholder.typicode.com/todos/1');
+           let data=await x.text(); //x.json();
+          
+            return data;
+            
+        }
+
+     
+
+        //approch 1st
+            // console.log("data loading")
+            // console.log("loaded data")
+            // let data=  getdata();
+            // data.then((data) => {
+            //   console.log(data);
+            // })
+
+            // approch second 2nd
+
+                   async function main(){
+            console.log("data loading")
+            console.log("loaded data")
+            let data= await getdata();
+            
+            console.log(data);
+//             fetch("http://example.com/api/endpoint/", {
+//   method: "post",
+//   headers: {
+//     'Accept': 'application/json',
+//     'Content-Type': 'application/json'
+//   },
+
+//   //make sure to serialize your JSON body
+//   body: JSON.stringify({
+//     name: myName,
+//     password: myPassword
+//   })
+// })
+// .then( (response) => { 
+//    //do something awesome that makes the world a better place
+// });
+            console.log("ready to next task");
+            console.log("task 2");
+        }
+        main();
+
+        
+    
+    </script>
+</body>
+</html>

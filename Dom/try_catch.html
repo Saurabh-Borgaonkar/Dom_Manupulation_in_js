@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>try catch and error handaling</title>
+</head>
+<body>
+    <script>
+
+        let a=prompt("Enter first num");
+        let b=prompt("Enter second num");
+       
+
+      //  alert("The sum is : ",sum)
+      if(isNaN(a)||isNaN(b)){
+        throw SyntaxError("a nd b are Nan")
+      }
+
+      let sum=parseInt(a)+parseInt(b);
+//when found error in tyr block then catch block will be execute
+      try {
+       // alert(sum);
+        console.log("The sum is : ",sum)
+        // setTimeout((sum)=>{
+        //     alert("Sum is : ",sum)
+        // },3000)
+        
+      } catch (error) {
+        alert(error.name);
+        alert(error.message)
+      //  alert(arr.stack)
+        alert("Somthing else wrong");
+      }
+     // when use retun in try and catch block iif you want to run next code then use finally
+      finally{
+        console.log("files Are being closed");
+      }
+   
+    </script>
+</body>
+</html>

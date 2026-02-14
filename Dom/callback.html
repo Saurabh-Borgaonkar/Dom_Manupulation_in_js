@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback function</title>
+</head>
+<body>
+    <h3>Callback</h3>
+</body>
+<script>
+    const fn=(name) => {
+      console.log("Hii",name)
+    }
+    
+    const callback=(arg)=>{
+        console.log(arg);
+       fn("saurabh")
+     }
+
+        const loadscript=(src,callback)=>{
+       let sc= document.createElement("script");
+        sc.src=src;
+            sc.onload=()=>callback(src);
+           sc.onerror=(new Error('failed'))
+        document.body.append(sc);
+    }
+    loadscript("https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/prism.min.js", callback)
+
+    // callback=(name)=>{
+    //     console.log("hiiii",name);
+    // }
+    // saurabh=(e)=>{
+    //     callback(e);
+    //     console.log("Sauarbh fun excuted and callback fun call");
+    // }
+    // saurabh("saurabh");
+</script>
+</html>
